@@ -1,63 +1,132 @@
-body{
-    background-color: #000000;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 4304px;
-    overflow-y: scroll;
+*{
+    padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: #fff;
+    font-family: sans-serif;
 }
 
-#section-1{
-    height: 700px;
-    flex-shrink: 0;
-    background-image: url(sec1image.png);
-    background-color: none;
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 24px 32px;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
 }
 
-.section{
-    display: flex;
-    flex-direction: row;
-    height: 569.5px;
-    padding: 72px 32px;
-    justify-content: center;
+header a.logo{
+    display: block;
+}
+
+header .logo svg{
+    fill: rgb(229,9,20);
+    height: 40px;
+}
+
+header div+div{
+    text-align: right;
+}
+
+header a.button button{
+    background-color: rgb(229,9,20);
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 17px;
+    border-radius: 4px;
+    font-family: sans-serif;
+    border: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    
+} 
+
+div.splash {
+    position: relative;
+}
+
+div.splash div.gradient{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    position: absolute;
+    inset: 0;
+}   
+
+div.splash div.background img{
+    max-width: 100%;
+    opacity: 0.6;
+}
+
+div.splash div.content{
+    max-width: 655px;
+    position: absolute;
+    inset: 0;
+    left: 50%;
+    margin-left: -327.5px;
+    display: grid;
     align-items: center;
-    flex-shrink: 0;
-    border-top: 8px solid #232323;
+    text-align: center;
 }
 
-.section-2-left{
-    background-color: aqua;
-    width: 568px;
-    height: 425.5px;
+div.splash h1{
+    font-size: 3rem;
+    font-weight: 900;
 }
 
-.section-2-right{
-    width: 568px;
-    height: 425.5px;
-    background-color: azure;
+div.splash h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 16px;
 }
 
-
-#section-6{
-    display: flex;
-    padding-top: 72px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 72.406px;
-    border-top: 8px solid #232323;
+div.splash h3{
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 24px;
 }
 
-#section-7{
-    display: flex;
-    padding-bottom: 0px;
-    flex-direction: column;
-    align-items: center;
-    gap: 72px;
-    border-top: 8px solid #232323;
+div.splash form{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-top: 16px;
 }
 
+div.splash input{
+    padding: 16px;
+    font-family: sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
 
+div.splash input ~ span{
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    z-index: 3;
+    color: #aaa;
+    transition: all 0.15s ease;
+    pointer-events: none;
+}
 
+div.splash input:focus ~ span{
+    top: 2px;
+    font-size: 0.8rem;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+div.splash button{
+    font-size: 24px;
+    padding: 12px 24px;
+    background-color: rgb(229, 9, 20);
+    color: #fff;
+    border: none;
+}
 
