@@ -3,6 +3,10 @@
     margin: 0px;
     box-sizing: border-box;
 }
+
+img{
+    max-width: 100%;
+}
 body{
     background-color: black;
     color: #fff;
@@ -12,7 +16,7 @@ body{
 header{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 24px 32px;
+    padding: 24px 200px;
     position: absolute;
     width: 100%;
     z-index: 5;
@@ -130,3 +134,134 @@ div.splash button{
     border: none;
 }
 
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 46px;
+    padding:72px 200px;
+    align-items: center;
+    border-top: 8px solid rgb(35, 35, 35);
+}
+
+section.last{
+    border-bottom: 8px solid rgb(35, 35, 35);
+}
+
+section div.texts h1{
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+section div.texts p{
+    font-size: 24px;
+}
+
+.media{
+    position: relative;
+}
+
+.media .s1 img{
+    width: 500px;
+}
+
+.media .s1 video{
+    width: 362px;
+    position: absolute;
+    top: 78px;
+    left: 68px;
+}
+
+section:nth-child(even) div.texts{
+    order: 2;
+}
+
+section div.download{
+    border: 2px solid #666;
+    border-radius: 15px;
+    padding: 8px 12px;
+    height: 95.2px;
+    width: 289.4px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    width: 320px;
+    left:50% ;
+    margin-left: -160px;
+    background-color: #000;
+    gap:15px;
+    grid-template-columns: max-content 1fr max-content;
+}
+
+section div.download img{
+    height: 75px;
+    width: auto;
+}
+
+section div.download div.note .note2{
+    color:rgb(0, 113, 235) ;
+    align-items: right;
+}
+
+.media .s3 img{
+    width: 500px;
+    position: relative;
+    z-index: 5;
+}
+
+.media .s3 video{
+    width: 362px;
+    position: absolute;
+    top: 78px;
+    left: 68px;
+}
+
+div.faq{
+    padding: 72px 200px;
+}
+
+div.faq h1{
+    font-size: 48px;
+    text-align: center;
+}
+
+div.questions{
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+div.question{
+    position: relative;
+    background-color: rgb(45, 45, 45);
+}
+
+div.question svg{
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 24px;
+    position: absolute;
+}
+
+div.question .header{
+    display: block;
+    padding: 24px 24px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
+div.question div.content{
+    padding: 0px 24px;
+    max-height: 0;
+    overflow: hidden;
+}
+
+div.question input[type="checkbox"]{
+    display: none;
+}
+
+div.question input[type="checkbox"]:checked ~ div.content{
+    padding: 0px 24px;
+    max-height: 600px;
+}
