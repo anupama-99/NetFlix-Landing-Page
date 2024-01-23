@@ -1,2 +1,2 @@
 # NetFlix-Landing-Page
-front-end of nexflix landing page
+front-end of netflix landing page
